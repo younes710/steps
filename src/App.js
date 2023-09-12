@@ -11,15 +11,15 @@ function App() {
     const [isOpen, setIsOpen] = useState(true);
 
     const handlePrevious = () => {
-        if (step > 1) setStep(step - 1);
+        if (step > 1) setStep((s) => s - 1);
     };
 
     const handleNext = () => {
-        if (step < 3) setStep(step + 1);
+        if (step < 3) setStep((s) => s + 1);
     };
 
     const handleClose = () => {
-        setIsOpen(!isOpen);
+        setIsOpen((is) => !is);
         setStep(1);
     };
     return (
